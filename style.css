@@ -7,7 +7,8 @@ body, html{
     background-attachment: fixed;
     color: white;
     background-color: grey;
-    background-image: linear-gradient(rgb(54, 54, 54), rgb(88, 88, 88));
+    background-image: linear-gradient(rgb(70, 70, 70), rgb(105, 105, 105));
+    /* background-image: linear-gradient(rgb(54, 54, 54), rgb(88, 88, 88)); */
 
 
     /* background-color: yellow; */
