@@ -134,6 +134,7 @@ nav a{
 
 #form-header{
     margin-left: 10px;
+    margin-right: 10px;
     text-align: center;
     margin-bottom: 10px;
 }
@@ -192,10 +193,14 @@ nav a{
     margin-bottom: 5px;
 }
 
+#all-country-data-header{
+    text-align: center;
+}
 
 footer{
     line-height: 2;
     text-align: center;
+    color: black;
 }
 footer a{
     text-decoration: none;
