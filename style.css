@@ -1,0 +1,124 @@
+body, html{
+    margin: 0;
+    font-family: sans-serif;
+    height: 100%;
+
+}
+#page-wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+header{
+
+}
+#banner{
+    text-align: center;
+    font-size: 30px;
+    margin: 10px 0;
+}
+#banner a{
+    color: black;
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+nav a{
+    text-decoration: none;
+    width: 200px;
+    text-align: center;
+    color: black;
+}
+#main-content{
+    /* width: 900px; */
+    margin: 0 auto;
+    border: solid 1px black;
+    flex: 1;
+}
+.month-heading{
+    margin: 0 10px;
+    font-size: 14pt;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-bottom: 1px solid black;
+}
+.month-container{
+    /* border: black 1px solid; */
+    overflow: hidden;
+    /* margin: 0 20px; */
+    margin-left: 20px;
+
+    visibility: hidden;
+    height: 0;
+    /* animation-name: expand-day; */
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+}
+.data-point{
+    border-bottom: 1px solid black;
+    /* padding-top: 2px; */
+    /* height: 25px; */
+    display: flex;
+    justify-content: space-between;
+
+}
+.day-data-point{
+    font-size: 15pt;
+    line-height: 2;
+    margin-right: 10px;
+    width: 10px;
+}
+.numbers-data-point{
+    font-size: 11pt;
+    line-height: 2.5;
+}
+.labels-data-point{
+    font-size: 10pt;
+    line-height: 2.5;
+}
+/* .new-cases-container{
+    margin-left: auto;
+}
+.total-cases-container{
+
+} */
+.total-new-container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+#footnote{
+    text-decoration: underline;
+}
+#footnote-message{
+    position: fixed;
+    visibility: hidden;
+    font-size: 10pt;
+    background-color: white;
+    padding: 2px;
+    /* display: none; */
+    /* top: 50px; */
+}
+
+footer{
+    line-height: 2;
+    text-align: center;
+}
+footer a{
+    text-decoration: none;
+    color: black;
+}
+
+
+@media only screen and (min-width: 961px) {
+    #main-content{
+        width: 900px;
+    }
+    nav{
+        width: 900px;
+        margin: 0 auto;
+    }
+}

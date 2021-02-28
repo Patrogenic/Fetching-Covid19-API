@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>COVID-19 Data</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    </head>
+    <body>
+        <header>
+            <div id="banner"><a href="index.html">COVID-19 Data</a></div>
+            <nav>
+                <a href="all_country_data.html">All Country Data</a>
+                <a href="all_states_data.html">All States Data</a>
+                <a href="single_day.html">Pick Day</a>
+            </nav>
+        </header>
+        <div id="main-content">
+            <div id="form-header">Input a date between January 14, 2020 and <span id="footnote">today</span></div>
+            <form id="set-date">
+                <label for="year">Choose a year:</label>
+                <select name="year" id="year-input">
+                    <option value="2020" selected>2020</option>
+                    <option value="2021">2021</option>
+                </select>
+            </form>
+            <div id='data-container'>
+
+            </div>
+        </div>
+        <span id="footnote-message">API stops serving data after March 6, 2021</span>
+        <footer></footer>
+
+
+
+        <script src='script.js'></script>
+        <script src="build_form.js"></script>
+        <script>
+            let covid19Data = new Covid19Data();
+
+            generateForm();
+
+            document.getElementById('footnote').addEventListener('mouseover', showFootNote);
+            document.getElementById('footnote').addEventListener('mouseout', hideFootNote);
+        </script>
+    </body>
+</html>
