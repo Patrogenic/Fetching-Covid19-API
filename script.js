@@ -101,6 +101,7 @@ class Covid19Data{
             for (let i = 0; i < keys.length; i++) {
                 console.log(keys[i] + ": " + dataExtracted[keys[i]]);
                 let divEl = document.createElement('div');
+                divEl.classList.add('data-details');
                 divEl.innerHTML = keys[i] + ": " + dataExtracted[keys[i]]; //might split into two elements, but we will see
                 //make some kind of CSS class to add to the elements
 

@@ -2,12 +2,26 @@ body, html{
     margin: 0;
     font-family: sans-serif;
     height: 100%;
+    /* background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)), url("background.png"); */
+    /* background-image: linear-gradient(rgb(21, 160, 153), rgb(175, 120, 58)); */
+    background-attachment: fixed;
+    color: white;
+    background-color: grey;
+    background-image: linear-gradient(rgb(54, 54, 54), rgb(88, 88, 88));
 
+
+    /* background-color: yellow; */
+}
+a{
+    color: white;
 }
 #page-wrapper{
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    /* background-image: url('background.png'); */
+    /* opacity: 0.2; */
+    
 }
 
 header{
@@ -19,23 +33,27 @@ header{
     margin: 10px 0;
 }
 #banner a{
-    color: black;
+    color: white;
     text-decoration: none;
 }
 nav{
     display: flex;
     justify-content: space-evenly;
+    /* background-color: grey; */
 }
 nav a{
     text-decoration: none;
     width: 200px;
     text-align: center;
-    color: black;
+    color: white;
+    border: 1px solid black;
 }
 #main-content{
     /* width: 900px; */
     margin: 0 auto;
-    border: solid 1px black;
+    width: 100%;
+    margin-top: 20px;
+    /* border: solid 1px black; */
     flex: 1;
 }
 .month-heading{
@@ -60,7 +78,7 @@ nav a{
 .data-point{
     border-bottom: 1px solid black;
     /* padding-top: 2px; */
-    /* height: 25px; */
+    height: 44px;
     display: flex;
     justify-content: space-between;
 
@@ -90,8 +108,16 @@ nav a{
     justify-content: space-around;
     width: 100%;
 }
+#set-state-container{
+    margin: 0 auto;
+    width: 200px;
+}
+/* Single Day Page */
 #footnote{
     text-decoration: underline;
+}
+#footnote:hover{
+    cursor: pointer;
 }
 #footnote-message{
     position: fixed;
@@ -99,9 +125,73 @@ nav a{
     font-size: 10pt;
     background-color: white;
     padding: 2px;
+    color: black;
     /* display: none; */
     /* top: 50px; */
 }
+
+/*Single Day Form Stuff*/
+
+#form-header{
+    margin-left: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#set-date{
+    margin-top: 10px;
+    margin: 0 auto;
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    /* height: 100px; */
+    /* justify-content: center; */
+    /* justify-content: space-evenly; */
+    /* width: 500px; */
+}
+#choose-date-label{
+    margin: 0 auto;
+}
+#year-input{
+    /* background-color: white; */
+}
+#months-input{
+
+}
+#days-input{
+
+}
+#year-label{
+    
+}
+#months-label{
+
+}
+#days-label{
+
+}
+#menus-container{
+    margin-right: 10px;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+}
+
+#submit-btn{
+    margin-left: 10px;
+    /* margin-top: 1px; */
+    display: block;
+    width: 80px;
+    margin: 0 auto;
+}
+.data-details{
+    margin-left: 10px;
+    margin-right: 10px;
+    border-bottom: black solid 1px;
+    margin-bottom: 5px;
+}
+
 
 footer{
     line-height: 2;
@@ -122,3 +212,4 @@ footer a{
         margin: 0 auto;
     }
 }
+/*Probably a good idea in this case to organize CSS by page */

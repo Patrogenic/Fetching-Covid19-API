@@ -9,27 +9,29 @@
         <style id="animation-style"></style>
     </head>
     <body>
-        <header>
-            <div id="banner"><a href="index.html">COVID-19 Data</a></div>
-            <nav>
-                <a href="all_country_data.html">All Country Data</a>
-                <a href="all_states_data.html">All States Data</a>
-                <a href="single_day.html">Pick Day</a>
-            </nav>
-        </header>
-        <div id="main-content">
-            <form id="set-state">
-                <label for="states">Choose a state:</label>
-                <select name="states" id="state-input">
+        <div id="page-wrapper">
+            <header>
+                <div id="banner"><a href="index.html">COVID-19 Data</a></div>
+                <nav>
+                    <a href="all_country_data.html">All Country Data</a>
+                    <a href="all_states_data.html">All States Data</a>
+                    <a href="single_day.html">Pick Day</a>
+                </nav>
+            </header>
+            <div id="main-content">
+                <div id="set-state-container">
+                    <form id="set-state">
+                        <label for="states">Choose a state:</label>
+                        <select name="states" id="state-input"></select>
+                    </form>
+                </div>
+                <div id="state-name"></div>
+                <div id='data-container'>
 
-                </select>
-            </form>
-            <div id="state-name"></div>
-            <div id='data-container'>
-
+                </div>
             </div>
+            <footer><a href="https://github.com/Patrogenic/Fetching-Covid19-API">GitHub</a></footer>
         </div>
-        <footer></footer>
 
 
 

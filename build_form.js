@@ -3,9 +3,10 @@ function generateMonthsMenu(){
     let setDateForm = document.getElementById('set-date');
     let selectLabel = document.createElement('label');
     let selectEl = document.createElement('select');
+    let menusContainer = document.getElementById('menus-container');
 
     selectLabel.htmlFor = "months";
-    selectLabel.innerHTML = "Months: ";
+    // selectLabel.innerHTML = "Months: ";
     selectEl.name = "months"
     selectEl.id = "months-input";
 
@@ -19,7 +20,7 @@ function generateMonthsMenu(){
     selectEl.addEventListener('change', generateDaysMenu);
 
     setDateForm.appendChild(selectLabel);
-    setDateForm.appendChild(selectEl);
+    menusContainer.appendChild(selectEl);
 }
 
 function daysInMonth (month, year) {
@@ -56,20 +57,23 @@ function generateForm(){
     let setDateForm = document.getElementById('set-date');
     let daySelectLabel = document.createElement('label');
     let daySelectEl = document.createElement('select');
+    let menusContainer = document.getElementById('menus-container');
+
 
     daySelectLabel.htmlFor = "days";
-    daySelectLabel.innerHTML = "Days: ";
+    // daySelectLabel.innerHTML = "Days: ";
     daySelectEl.name = "days"
     daySelectEl.id = "days-input";
 
     setDateForm.appendChild(daySelectLabel);
-    setDateForm.appendChild(daySelectEl);
+    menusContainer.appendChild(daySelectEl);
 
     generateDaysMenu(14);
 
     let submitBtn = document.createElement('button');
     submitBtn.type = 'button';
     submitBtn.innerHTML = 'Submit';
+    submitBtn.id = "submit-btn";
     submitBtn.addEventListener('click', covid19Data.getUSTotalsByDate.bind(covid19Data));
 
     setDateForm.appendChild(submitBtn);
@@ -145,10 +149,15 @@ function generateStateDropDownMenu(){
 
 function showFootNote(event){
     let footNoteMsg = document.getElementById('footnote-message');
-    footNoteMsg.style.left = event.clientX + "px";
-    footNoteMsg.style.top = event.clientY + "px";
+    footNoteMsg.style.left = event.clientX + 10 + "px";
+    footNoteMsg.style.top = event.clientY + 10 + "px";
     // footNoteMsg.style.display = "block";
-    footNoteMsg.style.visibility = "visible";
+    if(footNoteMsg.style.visibility.localeCompare("visible") === 0){
+        footNoteMsg.style.visibility = "hidden";
+
+    }else{
+        footNoteMsg.style.visibility = "visible";
+    }
 
     console.log('mousein');
 
