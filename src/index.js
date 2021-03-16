@@ -4,7 +4,8 @@
 import Covid19Data from './Covid19Data';
 import UserInterface from './UserInterface';
 
-const path = '/dist/';
+// const path = '/dist/'; //development
+const path = '/'; //production
 let covid19Data = new Covid19Data();
 let userInterface = new UserInterface();
 
