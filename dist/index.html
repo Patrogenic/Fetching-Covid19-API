@@ -6,7 +6,10 @@
         <title>COVID-19 Data</title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-        <style id="animation-style"></style>
+        <script>
+            //temporally redirecting the user until I can make a more proper introduction to this site
+            window.location.href = "all_country_data.html";
+        </script>
     </head>
     <body>
         <div id="page-wrapper">
@@ -19,30 +22,15 @@
                 </nav>
             </header>
             <div id="main-content">
-                <div id="set-state-container">
-                    <form id="set-state">
-                        <label for="states">Choose a state:</label>
-                        <select name="states" id="state-input"></select>
-                    </form>
-                </div>
-                <div id="state-name"></div>
-                <div id='data-container'>
-
-                </div>
+                <!-- <p>In this project, I fetch data from <a href="https://covidtracking.com/data/api/version-2">The COVID Tracking Project API</a> and display the data.</p> -->
             </div>
             <footer><a href="https://github.com/Patrogenic/Fetching-Covid19-API">GitHub</a> | <a href="https://covidtracking.com/data/api/version-2">API</a></footer>
         </div>
 
 
+        <!-- <script src='script.js'></script> -->
+        <script src="main.js"></script>
 
-        <script src='script.js'></script>
-        <script src="build_form.js"></script>
-        <script>
-            let covid19Data = new Covid19Data();
 
-            generateStateDropDownMenu();
-            
-            covid19Data.getAllStatesData();
-        </script>
     </body>
 </html>

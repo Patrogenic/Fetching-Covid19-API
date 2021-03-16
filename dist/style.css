@@ -1,17 +1,11 @@
 body, html{
     margin: 0;
-    font-family: sans-serif;
     height: 100%;
-    /* background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)), url("background.png"); */
-    /* background-image: linear-gradient(rgb(21, 160, 153), rgb(175, 120, 58)); */
+    font-family: sans-serif;
     background-attachment: fixed;
     color: white;
     background-color: grey;
     background-image: linear-gradient(rgb(70, 70, 70), rgb(105, 105, 105));
-    /* background-image: linear-gradient(rgb(54, 54, 54), rgb(88, 88, 88)); */
-
-
-    /* background-color: yellow; */
 }
 a{
     color: white;
@@ -20,8 +14,6 @@ a{
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    /* background-image: url('background.png'); */
-    /* opacity: 0.2; */
     
 }
 
@@ -40,7 +32,6 @@ header{
 nav{
     display: flex;
     justify-content: space-evenly;
-    /* background-color: grey; */
 }
 nav a{
     text-decoration: none;
@@ -50,11 +41,9 @@ nav a{
     border: 1px solid black;
 }
 #main-content{
-    /* width: 900px; */
     margin: 0 auto;
     width: 100%;
     margin-top: 20px;
-    /* border: solid 1px black; */
     flex: 1;
 }
 .month-heading{
@@ -63,22 +52,19 @@ nav a{
     margin-top: 2px;
     margin-bottom: 2px;
     border-bottom: 1px solid black;
+    cursor: pointer;
 }
 .month-container{
-    /* border: black 1px solid; */
     overflow: hidden;
-    /* margin: 0 20px; */
     margin-left: 20px;
 
     visibility: hidden;
     height: 0;
-    /* animation-name: expand-day; */
     animation-fill-mode: forwards;
-    animation-duration: 0.5s;
+    animation-duration: 0.8s;
 }
 .data-point{
     border-bottom: 1px solid black;
-    /* padding-top: 2px; */
     height: 44px;
     display: flex;
     justify-content: space-between;
@@ -98,12 +84,7 @@ nav a{
     font-size: 10pt;
     line-height: 2.5;
 }
-/* .new-cases-container{
-    margin-left: auto;
-}
-.total-cases-container{
 
-} */
 .total-new-container{
     display: flex;
     justify-content: space-around;
@@ -116,9 +97,10 @@ nav a{
 /* Single Day Page */
 #footnote{
     text-decoration: underline;
+    title: "";
 }
 #footnote:hover{
-    cursor: pointer;
+    color: rgb(214, 214, 214);
 }
 #footnote-message{
     position: fixed;
@@ -127,8 +109,6 @@ nav a{
     background-color: white;
     padding: 2px;
     color: black;
-    /* display: none; */
-    /* top: 50px; */
 }
 
 /*Single Day Form Stuff*/
@@ -146,16 +126,11 @@ nav a{
     width: 330px;
     display: flex;
     flex-direction: column;
-    /* height: 100px; */
-    /* justify-content: center; */
-    /* justify-content: space-evenly; */
-    /* width: 500px; */
 }
 #choose-date-label{
     margin: 0 auto;
 }
 #year-input{
-    /* background-color: white; */
 }
 #months-input{
 

@@ -6,7 +6,6 @@
         <title>COVID-19 Data</title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-        <style id="animation-style"></style>
     </head>
     <body>
         <div id="page-wrapper">
@@ -19,21 +18,36 @@
                 </nav>
             </header>
             <div id="main-content">
-                <div id="all-country-data-header">US Data</div>
+                <div id="form-header">Input a date between January 14, 2020 and <span id="footnote" title="API stops serving data after March 6, 2021">yesterday</span></div>
+                <form id="set-date">
+                    <!-- <label for="year" id="choose-date-label">Choose a date:</label> -->
+                    <div id="menus-container">
+                    <select name="year" id="year-input">
+                        <option value="2020" selected>2020</option>
+                        <option value="2021">2021</option></select></div></form>
+
                 <div id='data-container'>
 
                 </div>
             </div>
+            <!-- <span id="footnote-message">API stops serving data after March 6, 2021</span> -->
             <footer><a href="https://github.com/Patrogenic/Fetching-Covid19-API">GitHub</a> | <a href="https://covidtracking.com/data/api/version-2">API</a></footer>
         </div>
 
 
 
-        <script src='script.js'></script>
-        <script>
-            let covid19Data = new Covid19Data();
+        <!-- <script src='script.js'></script>
+        <script src="build_form.js"></script> -->
+        <script src="main.js"></script>
 
-            covid19Data.getAllUSData();
+
+        <script>
+            // let covid19Data = new Covid19Data();
+            // let userInterface = new UserInterface();
+
+            // generateForm();
+
+            // covid19Data.getUSTotalsByDate();
         </script>
     </body>
 </html>
