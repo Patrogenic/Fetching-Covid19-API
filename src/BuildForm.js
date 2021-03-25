@@ -61,6 +61,7 @@ class BuildForm{
         let numberOfDays = this.daysInMonth(monthsInput, yearInput);
     
         let daySelectEl = document.getElementById('days-input');
+        daySelectEl.innerHTML = '';
     
         for (let i = 1; i < numberOfDays + 1; i++) {
             let dayOptionEl = document.createElement('option');
